@@ -1,0 +1,72 @@
+## 静态作用域与动态作用域区别
+
+看到标题，相信大家有点懵逼，什么是静态作用域？什么又是动态作用域？先抛开这些不谈，我们先来看一个题目，这个题目来自于《你不知道的 JavaScript》（上）。
+
+```js
+
+function foo(){
+    console.log(a);
+}
+
+function bar(){
+    var a = 3;
+    foo();
+}
+
+var a = 2;
+
+bar();
+
+```
+
+执行以上代码，输出是什么？我们发现输出是**2**？这是啥情况，为什么不是 3，而是 2？到底是什么原因造成的？因为 JavaScript 是采用词法作用域的，那么 a 在 foo 函数内找不到，那么按照词法作用域， a 会去函数定义时的环境中找，也就是 2。
+
+### 静态作用域
+
+静态作用域（即词法作用域）中的函数遇到既不是形参也不是函数内部定义的局部变量的变量时，**会去函数定义时的环境中查询**。
+
+### 动态作用域
+
+动态作用域中的函数遇到既不是形参也不是函数内部定义的局部变量的变量时，**到函数调用时的环境中查**。
+
+---
+
+> 既不是形参也不是函数内部定义的局部变量的变量即**自由变量**。形参或函数内部定义的局部变量即**约束变量**。
+
+通过上面的描述，我们再看一题。
+
+```js
+
+var scope = "global scope";
+function checkscope(){
+    var scope = "local scope";
+    function f(){
+        return scope;
+    }
+    return f();
+}
+checkscope();
+
+
+```
+
+```js
+
+var scope = "global scope";
+function checkscope(){
+    var scope = "local scope";
+    function f(){
+        return scope;
+    }
+    return f;
+}
+checkscope()();
+
+```
+
+猜猜两段代码各返回什么？两段代码都返回 `local scope`。因为 `scope` 在 `f` 函数内找不到，所以会在函数定义时的作用域查找，所以是 `local scope`。
+
+## 参考
+
++ [动态作用域和词法域的区别是什么？](https://www.zhihu.com/question/20032419)
++ [JavaScript深入之词法作用域和动态作用域](https://github.com/mqyqingfeng/Blog/issues/3)
