@@ -8,49 +8,35 @@
 
 ```js
 export {
-  forEachChildren as forEach,
-  mapChildren as map,
-  countChildren as count,
-  onlyChild as only,
-  toArray,
+    forEachChildren as forEach,
+    mapChildren as map,
+    countChildren as count,
+    onlyChild as only,
+    toArray
 };
 ```
 
 ### forEachChildren
 
-1. 判断 children 是否为 null，如果是，则 return children
-2. 通过调用 getPooledTraverseContext 方法获取 traverseContext 对象，此方法是维护一个对象池，每次都会先去对象池内取对象，如果对象池没有对象，则新建，否则取出最后一个对象，修改属性值再使用。
+1. 判断 `children` 是否为 `null`，如果是，则` return children`。
+2. 调用 `getPooledTraverseContext` 方法获取 `traverseContext` 对象，此方法是维护一个对象池，每次都会先去对象池内取对象，如果对象池没有对象，则新建，否则取出最后一个对象，修改属性值再使用。
+3. 调用 `traverseAllChildrenImpl`，如果是可渲染节点，则调用 `forEachSingleChild` 方法。如果是数组或类数组，则再次调用 `traverseAllChildrenImpl`。
+
+### mapChildren
+
+![png](../../img/mapChildren.png)
+
+1. 判断 `children` 是否为 `null`，如果是，则` return children`，如果不是，则调用 `mapIntoWithKeyPrefixInternal`。
+2. 同 `forEachChildren` 第二步。
+3. 同 `forEachChildren` 第三步。但是 `map` 方法对于可渲染节点调用的方法是 `mapSingleChildIntoContext`。这个函数会判断函数返回值是否为数组，如果是，则再次循环调用 `mapIntoWithKeyPrefixInternal`。这样也就意味着，当你写如下代码时候，最终结果仍是一维数组。
 
     ```js
-    function getPooledTraverseContext(mapResult, keyPrefix, mapFunction, mapContext) {
-      if (traverseContextPool.length) {
-        const traverseContext = traverseContextPool.pop();
-        traverseContext.result = mapResult;
-        traverseContext.keyPrefix = keyPrefix;
-        traverseContext.func = mapFunction;
-        traverseContext.context = mapContext;
-        traverseContext.count = 0;
-        return traverseContext;
-      } else {
-        return {
-          result: mapResult,
-          keyPrefix: keyPrefix,
-          func: mapFunction,
-          context: mapContext,
-          count: 0,
-        };
-      }
-    }
+    ReactChildren.mapChildren(this.props.children, (child)=>{ return [child, child] })
     ```
 
-## 附录
+## 拓展阅读
 
-### 对象池
+### 对象池相关知识
 
-对象池概念可以从**js 设计模式 - 享元模式**说起。
-
-> 享元模式
-> 
-> 享元模式是一种软件设计模式，核心是使用共享物件，用来尽可能减少内存使用量以及分享咨询给尽可能多的相似物件；它适用于当大量物件只是因为重复因而导致使用大量内存的情景。
-
-
+- [JavaScript设计模式之享元模式](https://juejin.im/entry/5bcffdafe51d457ab36cfa30)
+- [Static Memory Javascript with Object Pools](https://www.html5rocks.com/en/tutorials/speed/static-mem-pools/)
