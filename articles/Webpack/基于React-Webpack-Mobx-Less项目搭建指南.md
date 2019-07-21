@@ -1,0 +1,105 @@
+> 此教程针对 Webpack 为 4.X 版本
+
+## Webpack
+
+> 版本是 `4.6.0`
+
+`Webpack` 支持零配置，如果 `entry` 不配置，默认值为 `./src` ；如果 `output` 不写，默认值为 `./dist`。`Webpack` 在 `4.X` 版本废弃了 `CommonsChunkPlugin`，需要使用 `optimize.splitChunks` 来替换。`extract-text-webpack-plugin@4.0.0-beta.0` 有很多问题，基于官方推荐，我们使用 `mini-css-extract-plugin` 来替换。
+
+`webpack.config.js` 是不能使用 `import` 命令的，需要把文件名改成 `webpack.config.babel.js` 才可以。这是一个 `webpack` 支持的特性，只要你把文件名改成 `webpack.config.[loader].js`， webpack 就会用相应的 `loader` 去转换一遍配置文件。
+
+新增了 `mode` 配置，有两个参数，一个为 `production`，另一个为 `development`。
+
+API：https://webpack.js.org/guides/getting-started/
+
+## Babel
+
+`Babel` 主要是用来把代码转译为 `ES5`。使用前需要在 `webpack.config.babel.js` 配置 `babel-loader`，其次，在新增 `.babelrc` 文件，在该文件中进行配置一些转译规则。
+
+在线转译的网址：http://babeljs.io/repl/
+
+
+## Mobx
+
+`Mobx` 是一个简单、可扩展的状态管理库。
+
+API：https://mobx.js.org/
+
+## Less
+
+`Less` 在 `CSS` 的语法基础之上，引入了变量，`Mixin`（混入），运算以及函数等功能，大大简化了 `CSS` 的编写，并且降低了 `CSS` 的维护成本，就像它的名称所说的那样，`Less` 可以让我们用更少的代码做更多的事情。
+
+API： http://lesscss.org/
+
+## 详细配置
+
+新建 `webpack.config.babel.js` 文件，并作如下配置。
+
+```js
+import path from 'path';
+// 清除文件夹内文件插件
+import CleanWebpackPlugin from 'clean-webpack-plugin';
+// 生成 HTML 文件插件
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+// 打开浏览器插件
+import OpenBrowserPlugin from 'open-browser-webpack-plugin';
+import alias from './webpack.alias.js';
+
+const port = 9676;
+
+module.exports = {
+    // 入口文件
+    entry: './src/index.js',
+    // 输出
+    output: {
+        // 输出文件名
+        filename: 'bundle.js',
+        // 输出路径
+        path: path.resolve(__dirname, 'dist')
+    },
+    // loader
+    module: {
+        rules: [{
+            test: /\.js[x]?$/,
+            loader: 'babel-loader',
+            // node_modules 不使用 babel-loader
+            exclude: /node_modules/
+        }, {
+            test: /\.less$/,
+            use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader']
+        }, {
+            test: /\.css/,
+            use: [MiniCssExtractPlugin.loader, 'css-loader']
+        }]
+    },
+    resolve: {
+        alias: alias,
+        extensions: ['.js', '.jsx']
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            title: 'Blog',
+            template: path.join(__dirname, 'template.ejs')
+        }),
+        new MiniCssExtractPlugin({
+            filename: '[name].css',
+            allChunks: true
+        }),
+        new CleanWebpackPlugin('./dist/*.*'),
+        new OpenBrowserPlugin({url: `http://localhost:${port}`})
+    ],
+    devServer: {
+        // 端口号
+        port: port,
+        host: '0.0.0.0',
+        compress: true,
+        // 请求带 api 的自动转发到 8987 端口
+        proxy: {
+            '/api/*': {
+                target: 'http://localhost:8987'
+            }
+        }
+    }
+};
+```

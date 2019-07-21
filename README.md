@@ -6,6 +6,7 @@
 
 - [细读 JavaScript 之类数组对象通过 Array.prototype.slice 转换成数组的原理](https://github.com/G-Grant/Note/blob/master/articles/%E7%BB%86%E8%AF%BB%20JavaScript/%E7%BB%86%E8%AF%BB%20JavaScript%20%E4%B9%8B%E7%B1%BB%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1%E9%80%9A%E8%BF%87%20Array.prototype.slice%20%E8%BD%AC%E6%8D%A2%E6%88%90%E6%95%B0%E7%BB%84%E7%9A%84%E5%8E%9F%E7%90%86.md)
 - [细读 JavaScript 之静态作用域与动态作用域区别](https://github.com/G-Grant/Note/blob/master/articles/%E7%BB%86%E8%AF%BB%20JavaScript/%E7%BB%86%E8%AF%BB%20JavaScript%20%E4%B9%8B%E9%9D%99%E6%80%81%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%B8%8E%E5%8A%A8%E6%80%81%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%8C%BA%E5%88%AB.md)
+- [细读JavaScript之揭开this的面纱]
 
 ## Webpack
 
@@ -23,4 +24,8 @@
 
 ## 其他
 
+- [一起来学习如何用 Node 来制作 CLI]()
+- [基于 GitLab CI 搭建前端自动构建环境]()
+- [也谈部分渲染]()
+- [如何构建一个高效的开发流程]()
 - [Common JS、AMD、CMD 和 UMD 的区别](https://github.com/G-Grant/Note/blob/master/articles/%E5%85%B6%E4%BB%96/Common%20JS%E3%80%81AMD%E3%80%81CMD%20%E5%92%8C%20UMD%20%E7%9A%84%E5%8C%BA%E5%88%AB.md)
