@@ -1,0 +1,59 @@
+## Common JS
+
++ 一个单独的文件就是一个模块，有自己的作用域。在一个文件里定义的变量、函数、类都是私有的，对其他文件不可见。
++ 加载模块使用 `require` 方法，该方法读取一个文件并执行，最后返回该文件内部的 `exports` 对象。
++ 模块加载的顺序，按照其在代码中出现的顺序。加载模块是**同步**的，所以只有加载完才能执行后面的操作。
++ 模块可以多次加载，但是只会在第一次加载时运行一次，然后运行结果就被缓存，以后再加载，就会直接读取缓存结果。要想让模块再次运行，必须清除缓存。
+
+> 像 `Node.js` 主要用于服务器的编程，加载的模块文件一般都已经存在本地硬盘，所以加载起来比较快，不用考虑异步加载的方式，所以 `CommonJS` 规范比较适用。但如果是浏览器环境，要从服务器加载模块，这是就必须采用**异步模式**。所以就有了 `AMD` 和 `CMD` 解决方案。
+
+## AMD
+
++ **异步加载模块规范**，这样模块和模块的依赖可以被异步加载。这和浏览器的异步加载模块的环境刚好匹配。
++ 本规范只定义了一个函数 `define`，它是全局变量。
++ `define.amd` 是遵从 `AMD` 规范的一个特殊标识符，它的值为**一个对象**。
+
+## CMD
+
++ 本规范只定义了一个函数 `define`，它是全局变量。
++ `define.cmd` 是遵从 `CMD` 规范的一个特殊标识符，它的值为**一个对象**。
+
+```js
+
+if (typeof define === "function" && define.cmd) {
+  // 有 Sea.js 等 CMD 模块加载器存在
+}
+
+```
+
+## UMD
+
+> `UMD` 是希望解决跨平台的解决方案。
+
++ `UMD` 是 `AMD` 和 `Common JS` 的糅合。
++ `AMD` 以浏览器第一的原则发展，异步加载模块。
++ `Common JS` 以服务器第一原则发展，选择同步加载，它的模块无需包装。
++ `UMD` 先判断是否支持 `Node.js` 的模块（ exports ） 是否存在，存在则使用 `Node.js` 模块模式。然后再判断是否支持 `AMD` （ define 是否存在 ），存在则使用 `AMD` 方式加载模块。
+
+```js
+
+(function(window, factory){
+    if(typeof exports === 'object'){
+        // Common JS
+        module.exports = factory();
+    }else if(typeof define === 'function' && defined.amd){
+        // AMD 方式
+        define(factory);
+    }else{
+        window.eventUtil = factory();
+    }
+})(this, function(){
+    // module ...
+})
+
+```
+
+## 扩展
+
++ [前端模块化开发那点历史](https://github.com/seajs/seajs/issues/588)
++ [Sea.js是如何工作的？](http://tinyambition.com/HelloSea.js/how-seajs-works.html)
