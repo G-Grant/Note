@@ -4,7 +4,11 @@
 
 ### 起步
 
-1.下载 Flutter SDK，当前版本为[flutter_macos_v1.0.0-stable](https://storage.googleapis.com/flutter_infra/releases/stable/macos/flutter_macos_v1.0.0-stable.zip)
+1.下载 Flutter SDK，当前版本为[flutter_macos_v1.0.0-stable](https://storage.googleapis.com/flutter_infra/releases/stable/macos/flutter_macos_v1.0.0-stable.zip)。当运行以下命令无法正常升级 flutter 时候，可以通过在 [Flutter 官网](https://flutter.dev/)下载压缩包，解压后替换之前 flutter 安装文件。
+
+```bash
+flutter upgrade
+```
 
 2.解压下载的文件，笔者解压的文件路径为 `~`
 
