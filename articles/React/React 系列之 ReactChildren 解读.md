@@ -24,7 +24,7 @@ export {
 
 ### mapChildren
 
-![png](../../img/mapChildren.png)
+![png](../../img/React/mapChildren.png)
 
 1. 判断 `children` 是否为 `null`，如果是，则` return children`，如果不是，则调用 `mapIntoWithKeyPrefixInternal`。
 2. 同 `forEachChildren` 第二步。
