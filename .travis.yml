@@ -10,4 +10,5 @@ before_install:
   - chmod +x deploy.sh
   - export TZ='Asia/Shanghai'  # 设置时区
 script:
+  - npm i
   - ./deploy.sh
