@@ -1,4 +1,5 @@
 module.exports = {
+    base: '/Note/',
     themeConfig: {
         searchMaxSuggestions: 10,
         lastUpdated: '最后更新',
