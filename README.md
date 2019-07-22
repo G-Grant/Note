@@ -40,4 +40,4 @@
     - [一起来学习如何用 Node 来制作 CLI](./articles/others/20180725.md)
     - [如何构建一个高效的开发流程](./articles/others/20181231.md)
     - [也谈部分渲染](./articles/others/20190120.md)
-    - [20190331](./articles/others/20190331.md)
+    - [Common JS、AMD、CMD 和 UMD 的区别](./articles/others/20190331.md)
