@@ -7,8 +7,8 @@
 - Webpack
 
     - [基于React+Webpack+Mobx+Less项目搭建指南](./articles/Webpack/20180502.md)
-    - [漫谈 Webpack 之服务端渲染、客户端渲染和同构](./articles/Webpack/20190721.md)
     - [漫谈 Webpack 之优化构建输出](./articles/Webpack/20190719.md)
+    - [漫谈 Webpack 之服务端渲染、客户端渲染和同构](./articles/Webpack/20190721.md)
 
 - Flutter
 
@@ -20,8 +20,8 @@
 
 - 细读 JavaScript
 
-    - [细读 JavaScript/细读 JavaScript 之静态作用域与动态作用域区别](./articles/JavaScript/20190329.md)
     - [细读 JavaScript 之类数组对象通过 Array.prototype.slice 转换成数组的原理](./articles/JavaScript/20190318.md)
+    - [细读 JavaScript 之静态作用域与动态作用域区别](./articles/JavaScript/20190329.md)
     - [细读JavaScript之揭开this的面纱](./articles/JavaScript/29190415.md)
 
 - 数据结构与算法分析
@@ -33,7 +33,7 @@
     - [前端应该掌握的网络知识](./articles/others/20170702.md)
     - [DOM整理](./articles/others/20170730.md)
     - [《高性能JavaScript》读书笔记](./articles/others/20171111.md)
-    - [gulp 入门](./articles/others/20171112.md)
+    - [Gulp 入门](./articles/others/20171112.md)
     - [Git 入门](./articles/others/20171118.md)
     - [初识Puppeteer](./articles/others/20180404.md)
     - [基于 GitLab CI 搭建前端自动构建环境](./articles/others/20180712.md)

@@ -1,11 +1,11 @@
 {
-  "name": "Note",
+  "name": "note",
   "version": "1.0.0",
-  "description": "- React",
+  "description": "前端积累",
   "main": "index.js",
   "scripts": {
-    "dev": "gitbook serve",
-    "build": "gitbook build"
+    "start": "vuepress dev",
+    "build": "vuepress build"
   },
   "repository": {
     "type": "git",
@@ -17,9 +17,5 @@
   "bugs": {
     "url": "https://github.com/G-Grant/Note/issues"
   },
-  "homepage": "https://github.com/G-Grant/Note#readme",
-  "devDependencies": {
-    "gitbook-plugin-expandable-chapters": "^0.2.0",
-    "gitbook-plugin-splitter": "0.0.8"
-  }
+  "homepage": "https://github.com/G-Grant/Note#readme"
 }

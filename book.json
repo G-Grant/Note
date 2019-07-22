@@ -1,6 +1,0 @@
-{
-    "title": "笔记",
-    "description": "笔记",
-    "lanuguage": "zh",
-    "plugins": ["expandable-chapters", "splitter"]
-}
