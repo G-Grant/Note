@@ -4,7 +4,8 @@
   "description": "- React",
   "main": "index.js",
   "scripts": {
-    "dev": "gitbook serve"
+    "dev": "gitbook serve",
+    "build": "gitbook build"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/G-Grant/Note/issues"
   },
-  "homepage": "https://github.com/G-Grant/Note#readme"
+  "homepage": "https://github.com/G-Grant/Note#readme",
+  "devDependencies": {
+    "gitbook-plugin-expandable-chapters": "^0.2.0",
+    "gitbook-plugin-splitter": "0.0.8"
+  }
 }
