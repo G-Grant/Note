@@ -20,9 +20,9 @@
 
 - 细读 JavaScript
 
-    - [细读 JavaScript/细读 JavaScript 之静态作用域与动态作用域区别](./articles/20190329.md)
-    - [细读 JavaScript 之类数组对象通过 Array.prototype.slice 转换成数组的原理](./articles/细读 JavaScript/20190318.md)
-    - [细读JavaScript之揭开this的面纱](./articles/细读 JavaScript/细读JavaScript之揭开this的面纱.md)
+    - [细读 JavaScript/细读 JavaScript 之静态作用域与动态作用域区别](./articles/JavaScript/20190329.md)
+    - [细读 JavaScript 之类数组对象通过 Array.prototype.slice 转换成数组的原理](./articles/JavaScript/20190318.md)
+    - [细读JavaScript之揭开this的面纱](./articles/JavaScript/细读JavaScript之揭开this的面纱.md)
 
 - 数据结构与算法分析
 
