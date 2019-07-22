@@ -4,8 +4,8 @@
   "description": "前端积累",
   "main": "index.js",
   "scripts": {
-    "start": "vuepress dev",
-    "build": "vuepress build"
+    "start": "vuepress dev docs",
+    "build": "vuepress build docs"
   },
   "repository": {
     "type": "git",
