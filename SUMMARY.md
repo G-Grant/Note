@@ -16,13 +16,13 @@
 
 - Canvas
 
-    - [Canvas学习笔记（一）](./articles/Canvas/Canvas学习笔记（一）.md)
+    - [Canvas学习笔记（一）](./articles/Canvas/20181001.md)
 
 - 细读 JavaScript
 
     - [细读 JavaScript/细读 JavaScript 之静态作用域与动态作用域区别](./articles/JavaScript/20190329.md)
     - [细读 JavaScript 之类数组对象通过 Array.prototype.slice 转换成数组的原理](./articles/JavaScript/20190318.md)
-    - [细读JavaScript之揭开this的面纱](./articles/JavaScript/细读JavaScript之揭开this的面纱.md)
+    - [细读JavaScript之揭开this的面纱](./articles/JavaScript/29190415.md)
 
 - 数据结构与算法分析
 
@@ -40,4 +40,4 @@
     - [一起来学习如何用 Node 来制作 CLI](./articles/others/20180725.md)
     - [如何构建一个高效的开发流程](./articles/others/20181231.md)
     - [也谈部分渲染](./articles/others/20190120.md)
-    - [Common JS、AMD、CMD 和 UMD 的区别](./articles/others/Common JS、AMD、CMD 和 UMD 的区别.md)
+    - [20190331](./articles/others/20190331.md)

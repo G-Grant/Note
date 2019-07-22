@@ -1,0 +1,20 @@
+{
+  "name": "Note",
+  "version": "1.0.0",
+  "description": "- React",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gitbook serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/G-Grant/Note.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/G-Grant/Note/issues"
+  },
+  "homepage": "https://github.com/G-Grant/Note#readme"
+}
