@@ -1,15 +1,23 @@
 module.exports = {
     base: '/Note/',
+    head: [
+        ['link', { rel: 'shortcut icon', href: '/favicon.ico', type: 'image/x-icon' }],
+        ['link', { rel: 'icon', href: '/favicon.ico', type: 'image/x-icon' }]
+    ],
     themeConfig: {
         searchMaxSuggestions: 10,
         lastUpdated: '最后更新',
-        nav: [{
-            text: '首页',
-            link: '/'
-        }, {
-            text: 'Github',
-            link: 'https://github.com/G-Grant/Note'
-        }]
+        sidebar: 'auto',
+        nav: [
+            {
+                text: '首页',
+                link: '/'
+            },
+            {
+                text: 'Github',
+                link: 'https://github.com/G-Grant'
+            }
+        ]
     },
     markdown: {
         lineNumbers: true
@@ -18,7 +26,7 @@ module.exports = {
         '/': {
             lang: 'zh-CN',
             title: '博客',
-            description: '不积跬步，无以至千里；不积小流，无以成江海。',
+            description: '不积跬步，无以至千里；不积小流，无以成江海。'
         }
     }
-}
+};
