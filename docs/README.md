@@ -4,7 +4,7 @@
 
 - [Mobx 源码初探 - observable（二）](./20190825.md)
 - [一起来了解什么是 HOC](./20190818.md)
-- [Mobx 源码初探 - observable](./20190811.md)
+- [Mobx 源码初探 - observable（一）](./20190811.md)
 - [解读 Babel 编译后的 decorator 代码](./20190810.md)
 - [Koa 源码解读](./20190805.md)
 
