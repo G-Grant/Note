@@ -1,21 +1,24 @@
 {
-  "name": "note",
-  "version": "1.0.0",
-  "description": "前端积累",
-  "main": "index.js",
-  "scripts": {
-    "start": "vuepress dev docs",
-    "build": "vuepress build docs"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/G-Grant/Note.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/G-Grant/Note/issues"
-  },
-  "homepage": "https://github.com/G-Grant/Note#readme"
+    "name": "note",
+    "version": "1.0.0",
+    "description": "前端积累",
+    "main": "index.js",
+    "scripts": {
+        "start": "vuepress dev docs",
+        "build": "node ./builds/addComponents.js && vuepress build docs && node ./builds/delComponents.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/G-Grant/Note.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/G-Grant/Note/issues"
+    },
+    "homepage": "https://github.com/G-Grant/Note#readme",
+    "devDependencies": {
+        "node": "^12.9.0"
+    }
 }
