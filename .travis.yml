@@ -11,5 +11,5 @@ before_install:
   - export TZ='Asia/Shanghai'  # 设置时区
 script:
   - curl -o- -L https://yarnpkg.com/install.sh | bash
-  - yarn i vuepress -g
+  - yarn add vuepress -g
   - ./deploy.sh
