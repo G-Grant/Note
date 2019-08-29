@@ -10,6 +10,10 @@ export default {
     return {};
   },
   mounted() {
+    const linkGitalk = document.createElement("link");
+    linkGitalk.href = "https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css";
+    linkGitalk.rel = "stylesheet";
+    document.body.appendChild(linkGitalk);
     let body = document.querySelector(".gitalk-container");
     let script = document.createElement("script");
     script.src = "https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js";

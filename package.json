@@ -17,8 +17,5 @@
     "bugs": {
         "url": "https://github.com/G-Grant/Note/issues"
     },
-    "homepage": "https://github.com/G-Grant/Note#readme",
-    "devDependencies": {
-        "node": "^12.9.0"
-    }
+    "homepage": "https://github.com/G-Grant/Note#readme"
 }
