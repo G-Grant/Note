@@ -6,6 +6,7 @@
 
 ### 2019 年 9 月
 
+- [TypeScript 从入门到放弃](./docs/20190930.md)
 - [Set 和 Map 数据结构](./docs/20190903.md)
 - [Symbol](./docs/20190902.md)
 
