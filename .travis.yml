@@ -1,15 +1,13 @@
 language: node_js
 sudo: required
-node_js:
-  - 10.15.3
 branch: master
 cache:
+  yarn: true
   directories:
     - node_modules
 before_install:
   - chmod +x deploy.sh
   - export TZ='Asia/Shanghai'  # 设置时区
 script:
-  - npm i vuepress -g
-  - npm i @vue/component-compiler-utils
+  - yarn add vuepress -g
   - ./deploy.sh
