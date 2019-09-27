@@ -2,12 +2,12 @@ language: node_js
 sudo: required
 branch: master
 cache:
-  yarn: true
   directories:
     - node_modules
 before_install:
   - chmod +x deploy.sh
   - export TZ='Asia/Shanghai'  # 设置时区
 script:
+  - yarn --version
   - yarn add vuepress -g
   - ./deploy.sh
