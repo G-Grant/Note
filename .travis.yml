@@ -10,5 +10,6 @@ before_install:
   - chmod +x deploy.sh
   - export TZ='Asia/Shanghai'  # 设置时区
 script:
-  - npm i vuepress@1.0.4 -g
+  - npm i vuepress -g
+  - npm i @vue/component-compiler-utils
   - ./deploy.sh
