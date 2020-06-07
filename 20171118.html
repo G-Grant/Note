@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Git 入门 | 博客</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    <link rel="shortcut icon" href="/Note/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/Note/favicon.ico" type="image/x-icon">
+    <meta name="description" content="不积跬步，无以至千里；不积小流，无以成江海。">
+    <link rel="preload" href="/Note/assets/css/0.styles.912d5f67.css" as="style"><link rel="preload" href="/Note/assets/js/app.d8addd1b.js" as="script"><link rel="preload" href="/Note/assets/js/2.ea6ca259.js" as="script"><link rel="preload" href="/Note/assets/js/3.275498d0.js" as="script"><link rel="preload" href="/Note/assets/js/15.d0f1fe9f.js" as="script"><link rel="prefetch" href="/Note/assets/js/10.364bfac9.js"><link rel="prefetch" href="/Note/assets/js/11.b070fa8b.js"><link rel="prefetch" href="/Note/assets/js/12.87e564c0.js"><link rel="prefetch" href="/Note/assets/js/13.93618547.js"><link rel="prefetch" href="/Note/assets/js/14.f132774e.js"><link rel="prefetch" href="/Note/assets/js/16.eb2ef4ca.js"><link rel="prefetch" href="/Note/assets/js/17.59033c4d.js"><link rel="prefetch" href="/Note/assets/js/18.39a25dcb.js"><link rel="prefetch" href="/Note/assets/js/19.0a20a7e3.js"><link rel="prefetch" href="/Note/assets/js/20.c0d02306.js"><link rel="prefetch" href="/Note/assets/js/21.e81858cf.js"><link rel="prefetch" href="/Note/assets/js/22.4959798d.js"><link rel="prefetch" href="/Note/assets/js/23.f85a7dfb.js"><link rel="prefetch" href="/Note/assets/js/24.d1277292.js"><link rel="prefetch" href="/Note/assets/js/25.50ee3d85.js"><link rel="prefetch" href="/Note/assets/js/26.2b1f31c1.js"><link rel="prefetch" href="/Note/assets/js/27.8fdc9a75.js"><link rel="prefetch" href="/Note/assets/js/28.0e2381a5.js"><link rel="prefetch" href="/Note/assets/js/29.77e93840.js"><link rel="prefetch" href="/Note/assets/js/30.b7483e03.js"><link rel="prefetch" href="/Note/assets/js/31.59e53743.js"><link rel="prefetch" href="/Note/assets/js/32.00e52397.js"><link rel="prefetch" href="/Note/assets/js/33.0acef753.js"><link rel="prefetch" href="/Note/assets/js/34.4e58ba6f.js"><link rel="prefetch" href="/Note/assets/js/35.87dda1b4.js"><link rel="prefetch" href="/Note/assets/js/36.a5069380.js"><link rel="prefetch" href="/Note/assets/js/37.dda07340.js"><link rel="prefetch" href="/Note/assets/js/4.af59e2a3.js"><link rel="prefetch" href="/Note/assets/js/5.6cbca780.js"><link rel="prefetch" href="/Note/assets/js/6.92174d3c.js"><link rel="prefetch" href="/Note/assets/js/7.6a3045d5.js"><link rel="prefetch" href="/Note/assets/js/8.525bfe4b.js"><link rel="prefetch" href="/Note/assets/js/9.00848bb5.js">
+    <link rel="stylesheet" href="/Note/assets/css/0.styles.912d5f67.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/Note/" class="home-link router-link-active"><!----> <span class="site-name">博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/Note/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="https://github.com/G-Grant" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Note/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="https://github.com/G-Grant" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Git 入门</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Note/20171118.html#什么是版本控制工具" class="sidebar-link">什么是版本控制工具</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/Note/20171118.html#安装-git" class="sidebar-link">安装 Git</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/Note/20171118.html#新建一个-git-仓库" class="sidebar-link">新建一个 Git 仓库</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/Note/20171118.html#新建一个文件" class="sidebar-link">新建一个文件</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/Note/20171118.html#关联远程仓库" class="sidebar-link">关联远程仓库</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/Note/20171118.html#生成-ssh-key" class="sidebar-link">生成 SSH Key</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/Note/20171118.html#克隆仓库" class="sidebar-link">克隆仓库</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/Note/20171118.html#备注" class="sidebar-link">备注</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="git-入门"><a href="#git-入门" aria-hidden="true" class="header-anchor">#</a> Git 入门</h1> <p><code>Git</code> 是一个版本控制工具，正因为它仅仅是一个工具，所以我们不必耗费很大的精力去学习那些永远不会用到的命令，但是常用的命令还是得必须会使用。当然，常见的版本控制工具还有 <code>SVN、TFS</code>。</p> <h2 id="什么是版本控制工具"><a href="#什么是版本控制工具" aria-hidden="true" class="header-anchor">#</a> 什么是版本控制工具</h2> <p>版本控制工具--假设你写了一篇论文，后来的某一时间点，你修改了论文内容，过了一天后，发现更改之前的论文是正确的。当你没有版本控制工具时候，/(ㄒoㄒ)/~~。情况好一点，修改之前，备份了。但是，当这种操作在足够多的情况下，你的备份也就足够多，很容易乱掉。版本控制工具就是为了解决这种问题。</p> <h2 id="安装-git"><a href="#安装-git" aria-hidden="true" class="header-anchor">#</a> 安装 Git</h2> <blockquote><p>使用 <code>brew</code> 安装 <code>Git</code>。</p></blockquote> <div class="language-powershell line-numbers-mode"><pre class="language-powershell"><code>
+<span class="token comment"># 电脑未安装 `Homebrew`</span>
+<span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>ruby <span class="token operator">-</span>e <span class="token string">&quot;<span class="token function">$<span class="token punctuation">(</span>curl <span class="token operator">-</span>fsSL https:<span class="token operator">/</span><span class="token operator">/</span>raw<span class="token punctuation">.</span>githubusercontent<span class="token punctuation">.</span>com<span class="token operator">/</span>Homebrew<span class="token operator">/</span>install<span class="token operator">/</span>master<span class="token operator">/</span>install<span class="token punctuation">)</span></span>&quot;</span>
+
+<span class="token comment"># 电脑已安装 `Homebrew`</span>
+brew install git
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h2 id="新建一个-git-仓库"><a href="#新建一个-git-仓库" aria-hidden="true" class="header-anchor">#</a> 新建一个 Git 仓库</h2> <p>新建一个名为 <code>Git-Demo</code> 的文件夹，执行以下命令。运行完成后，<code>Git</code> 仓库就建好了。</p> <div class="language-powershell line-numbers-mode"><pre class="language-powershell"><code>
+git init
+<span class="token comment"># Initialized empty Git repository in /Users/grant/Documents/Git-Demo/.git/</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h2 id="新建一个文件"><a href="#新建一个文件" aria-hidden="true" class="header-anchor">#</a> 新建一个文件</h2> <p>在 <code>Git-Demo</code> 内新建一个名为 <code>README.md</code>文件后，运行 <code>git status</code>，你将看到下图所示。。</p> <p><img src="/Note/assets/img/git-1.db1058b0.png" alt="img"></p> <p>这时，运行 <code>git add README.md</code> 命令，该文件就被提交到缓存区了。</p> <p><img src="/Note/assets/img/git-2.a75ca105.png" alt="img"></p> <p>运行 <code>git commit -m 'add readme.md'</code>命令，该文件就被提交到仓库了。</p> <p><img src="/Note/assets/img/git-3.f3aa8e0c.png" alt="img"></p> <p>当你想查询提交历史的时候，输入 <code>git log</code> 就可以查看。如果想退出查询界面，按下 <code>q</code> 就可以退出了。</p> <p><img src="/Note/assets/img/git-4.a1b0f36a.png" alt="img"></p> <h2 id="关联远程仓库"><a href="#关联远程仓库" aria-hidden="true" class="header-anchor">#</a> 关联远程仓库</h2> <p>关联到远程仓库，使用如下命令。</p> <div class="language-powershell line-numbers-mode"><pre class="language-powershell"><code>
+git remote add origin git@XXX<span class="token operator">/</span>Git<span class="token operator">-</span>Demo<span class="token punctuation">.</span>git
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>添加完成之后，是时候提交了。使用 <code>git push -u origin master</code> 命令。如图，就代表代码已经提交到远程仓库了。</p> <p><img src="/Note/assets/img/git-5.803c927a.png" alt="img"></p> <blockquote><p>可以使用 <code>git remote -v</code> 来查看关联的仓库。</p></blockquote> <p>这个时候，我们去 <code>gitlab</code> 上看下提交的结果。</p> <p><img src="/Note/assets/img/git-6.0016bdfa.png" alt="img"></p> <h2 id="生成-ssh-key"><a href="#生成-ssh-key" aria-hidden="true" class="header-anchor">#</a> 生成 SSH Key</h2> <p>是不是发现自己无法提交？哈哈，那是因为提交到远程仓库，需要你拥有远程仓库的权限。这时，ssh key 就派上用场了。打开控制台执行以下命令来生成它。</p> <div class="language-powershell line-numbers-mode"><pre class="language-powershell"><code>
+ssh<span class="token operator">-</span>keygen <span class="token operator">-</span>t rsa <span class="token operator">-</span>C <span class="token string">&quot;XX@XX.com&quot;</span> <span class="token comment"># 邮箱账号</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><blockquote><p>~/.ssh/id_rsa 是私钥，~/.ssh/id_rsa.pub 是公钥</p></blockquote> <p>接着打开公钥：</p> <div class="language-powershell line-numbers-mode"><pre class="language-powershell"><code>
+<span class="token function">cat</span> ~<span class="token operator">/</span><span class="token punctuation">.</span>ssh<span class="token operator">/</span>id_rsa<span class="token punctuation">.</span>pub <span class="token comment"># 输出公钥内容</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>复制输出内容，打开 <code>gitlab</code>，点击 <code>Settings</code>=&gt;<code>SSH Keys</code>，把复制好的内容粘贴到 key 里面，然后为这个 key 起一个名字，点击 Add Key 就大功告成啦。</p> <h2 id="克隆仓库"><a href="#克隆仓库" aria-hidden="true" class="header-anchor">#</a> 克隆仓库</h2> <p>当你已有一个远程仓库，你需要执行 <code>git clone git@XXX/Git-Demo.git</code>来把代码克隆到本地。如图，该远程仓库就已经被克隆下来了。</p> <p><img src="/Note/assets/img/git-7.738ddf6d.png" alt="img"></p> <p>当你对改仓库做任何修改，同时想把修改都同步到远程仓库的时候，都需要依次执行。</p> <div class="language-powershell line-numbers-mode"><pre class="language-powershell"><code>
+git add someFile
+
+git commit <span class="token operator">-</span>m <span class="token string">'update'</span>
+
+git push
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h2 id="备注"><a href="#备注" aria-hidden="true" class="header-anchor">#</a> 备注</h2> <div class="language-powershell line-numbers-mode"><pre class="language-powershell"><code>
+<span class="token comment"># 全局配置</span>
+
+git config <span class="token operator">--</span>global user<span class="token punctuation">.</span>name <span class="token string">&quot;xxx&quot;</span>
+
+git config <span class="token operator">--</span>global user<span class="token punctuation">.</span>email <span class="token string">&quot;xxx@xxx.com&quot;</span>
+
+<span class="token comment"># 当前项目配置</span>
+
+git config <span class="token operator">--</span>local user<span class="token punctuation">.</span>name <span class="token string">&quot;xxx&quot;</span>
+
+git config <span class="token operator">--</span>local user<span class="token punctuation">.</span>email <span class="token string">&quot;xxx@xxx.com&quot;</span>
+
+<span class="token comment"># 查看本地分支</span>
+
+git branch
+
+<span class="token comment"># 查看本地分支，并查看每一分支最后一次提交信息</span>
+
+git branch <span class="token operator">-</span>v
+
+<span class="token comment"># 查看远程分支</span>
+
+git branch <span class="token operator">-</span>r
+
+<span class="token comment"># 查看所有本地分支和远程分支</span>
+
+git branch <span class="token operator">-</span>a
+
+<span class="token comment"># 新增一个分支，但依然停留在当前分支</span>
+
+git checkout develop
+
+<span class="token comment"># 新增一个分支，并切换到该分支</span>
+
+git branch develop
+git checkout develop
+
+<span class="token comment"># 切换分支</span>
+
+git checkout master
+
+<span class="token comment"># 合并分支</span>
+
+git merge hotfix
+
+<span class="token comment"># 删除本地分支</span>
+git branch <span class="token operator">-</span>d testing
+
+<span class="token comment"># 删除远程分支</span>
+git push origin :serverfix
+
+<span class="token comment"># 恢复暂存区的指定文件到工作区</span>
+
+git checkout <span class="token namespace">[file]</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br></div></div> <div class="gitalk-container"><div id="gitalk-container"></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新:</span> <span class="time">8/10/2019, 7:38:12 PM</span></div></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/Note/assets/js/app.d8addd1b.js" defer></script><script src="/Note/assets/js/2.ea6ca259.js" defer></script><script src="/Note/assets/js/3.275498d0.js" defer></script><script src="/Note/assets/js/15.d0f1fe9f.js" defer></script>
+  </body>
+</html>
